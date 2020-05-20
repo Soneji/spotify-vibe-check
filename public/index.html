@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Spotify Vibe Checker</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="sorttable.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="login" class="darkmode">
+        <h1>Welcome to the Spotify Vibe Checker App</h1>
+        <h2>Please log in to use the app</h2>
+        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+        <br><br>
+        <p>Some info on the app:</p>
+        <p>Spotify vibe checker was created with the official Spotify API and generates statistics about the nature of your playlists. The characteristics generated are shown below</p>
+        <ul>
+          <li>Average Playlist Energy represents a perceptual measure of intensity and activity. Typically, energetic
+            tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.</li>
+          <li>Average Playlist Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.</li>
+          <li>Average Playlist Vibes – Tracks with high vibes sound more positive (e.g. happy, cheerful, euphoric), while tracks with low vibes sound more negative (e.g. sad, depressed,angry).</li>
+        </ul>
+      </div>
+      
+      <div id="loggedin" class="darkmode">
+        <h1>Welcome to the Spotify Vibe Checker App</h1>
+        <button class="btn btn-default" id="obtain-new-token">If nothing is showing up, press me!</button><br><br>
+        <button class="btn btn-default" id="tanban">Click me to go to custom hacker page</button><br><br>
+        
+        <ul>
+          <li>Average Playlist Energy represents a perceptual measure of intensity and activity. Typically, energetic
+            tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the
+            scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset
+            rate, and general entropy.</li>
+          <li>Average Playlist Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.</li>
+          <li>Average Playlist Vibes – Tracks with high vibes sound more positive (e.g. happy, cheerful, euphoric), while tracks with low vibes sound more negative (e.g. sad, depressed,angry).</li>
+        </ul>
+        <p>PS: You can click the table headings to sort</p>
+        <table style="max-width:90%;" class="sortable" id='table'>
+          <tr>
+            <th></th>
+            <th>Playlist Name</th>
+            <th>Energy</th>
+            <th>Danceability</th>
+            <th>Vibes</th>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="index.js" async></script>
+  </body>
+</html>
+
