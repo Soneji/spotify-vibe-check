@@ -24,7 +24,7 @@ npm install
  ![](assets/create.png)
 
  - Fill in details:
-  <br><img src="assets/details.png" width=300>
+  <br><img src="assets/details.png" width=300px>
 
  - Choose `NON COMMERCIAL`
 
@@ -32,7 +32,7 @@ npm install
 
  - Click `Edit Settings` in the top right
  ![](assets/secret.png)
- ![](assets/callback.png)
+ <img src="assets/callback.png" width=300px>
 
  - Under `Redirect URIs` add `http://localhost:8888/callback` or replace `localhost` with any server hostname you plan to host this app. 
 
