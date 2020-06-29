@@ -20,7 +20,7 @@ var client_id = process.env.client_id; // Your client id
 var client_secret = process.env.client_secret; // Your secret
 
 // change the if statement to your server's hostname and your redirect url you've set in spotify developer settings
-if (os.hostname() == 'soneji.xyz'){
+if (os.hostname() == 'soneji.xyz') {
   var redirect_uri = 'https://spotify-vibe-check.soneji.xyz/callback'
 } else {
   var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
@@ -31,7 +31,7 @@ if (os.hostname() == 'soneji.xyz'){
  * @param  {number} length The length of the string
  * @return {string} The generated string
  */
-var generateRandomString = function(length) {
+var generateRandomString = function (length) {
   var text = '';
   var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -46,10 +46,10 @@ var stateKey = 'spotify_auth_state';
 var app = express();
 
 app.use(express.static(__dirname + '/public'))
-   .use(cors())
-   .use(cookieParser());
+  .use(cors())
+  .use(cookieParser());
 
-app.get('/login', function(req, res) {
+app.get('/login', function (req, res) {
 
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
@@ -66,7 +66,7 @@ app.get('/login', function(req, res) {
     }));
 });
 
-app.get('/callback', function(req, res) {
+app.get('/callback', function (req, res) {
 
   // your application requests refresh and access tokens
   // after checking the state parameter
@@ -95,18 +95,18 @@ app.get('/callback', function(req, res) {
       json: true
     };
 
-    request.post(authOptions, function(error, response, body) {
+    request.post(authOptions, function (error, response, body) {
       if (!error && response.statusCode === 200) {
 
         var access_token = body.access_token,
-            refresh_token = body.refresh_token;
-        
+          refresh_token = body.refresh_token;
+
         // make logs pretty
         var today = new Date();
         var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();  
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         console.log('=========================================================')
-        console.log(date + ' ' + time);      
+        console.log(date + ' ' + time);
 
         var options = {
           url: 'https://api.spotify.com/v1/me',
@@ -114,7 +114,7 @@ app.get('/callback', function(req, res) {
           json: true
         };
         // use the access token to access the Spotify Web API
-        request.get(options, function(error, response, body) {
+        request.get(options, function (error, response, body) {
           console.log(body);
         });
 
@@ -133,7 +133,7 @@ app.get('/callback', function(req, res) {
   }
 });
 
-app.get('/refresh_token', function(req, res) {
+app.get('/refresh_token', function (req, res) {
 
   // requesting access token from refresh token
   var refresh_token = req.query.refresh_token;
@@ -147,7 +147,7 @@ app.get('/refresh_token', function(req, res) {
     json: true
   };
 
-  request.post(authOptions, function(error, response, body) {
+  request.post(authOptions, function (error, response, body) {
     if (!error && response.statusCode === 200) {
       var access_token = body.access_token;
       res.send({
