@@ -121,9 +121,9 @@
                                     let b = arrAvg(dancabilities); b = b * 100; b = b.toFixed(2); dancabilities = [];
                                     let c = arrAvg(vibes); c=c*100; c=c.toFixed(2); vibes = [];
                                     if (c < 50){
-                                        d = `big sad<br>${c}%`;
+                                        d = `${c}%<br>big sad%`;
                                     } else {
-                                        d = `big happy<br>${c}%`;
+                                        d = `${c}%<br>big happy`;
                                     }
                                     let n=playlist.name.toLowerCase();
                                     if (
@@ -139,7 +139,7 @@
                                         n.includes('kcsoc') ||
                                         n.includes('shubh')
                                     ) {
-                                        d = `big Haribol!<br>${c}%`;
+                                        d = `${c}%<br>big Haribol!`;
                                     }
                                 
                                     // if ( getTracks(playlist.id)==true ){
