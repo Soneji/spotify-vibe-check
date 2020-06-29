@@ -120,6 +120,9 @@
                                     let a = arrAvg(energies); a = a * 100; a = a.toFixed(2); energies = [];
                                     let b = arrAvg(dancabilities); b = b * 100; b = b.toFixed(2); dancabilities = [];
                                     let c = arrAvg(vibes); c = c * 100; c = c.toFixed(2); vibes = [];
+                                    if (c < 10) {
+                                        c = "0" + c;
+                                    }
                                     if (c < 50) {
                                         d = `${c}%<br>big sad%`;
                                     } else {
