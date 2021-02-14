@@ -1,5 +1,7 @@
 # spotify-vibe-check
 
+<img src="https://repository-images.githubusercontent.com/265615768/d8cf0600-ba69-11ea-9d02-44082bab200c">
+
 ## This is a cheeky app to vibe check your spotify playlists!
 
 ### Check it out at [spotify-vibe-check.soneji.xyz](https://spotify-vibe-check.soneji.xyz)
