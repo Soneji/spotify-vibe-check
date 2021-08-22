@@ -13,7 +13,7 @@
 ### Step 1
 
 ```sh
-git clone https://github.com/overclockedllama/spotify-vibe-check.git
+git clone https://github.com/Soneji/spotify-vibe-check.git
 
 cd spotify-vibe check
 
