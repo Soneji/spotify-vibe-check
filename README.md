@@ -4,7 +4,7 @@
 
 ## This is a cheeky app to vibe check your spotify playlists!
 
-### Check it out at [spotify-vibe-check.soneji.xyz](https://spotify-vibe-check.soneji.xyz)
+### Check it out at [spotify.soneji.xyz](https://spotify.soneji.xyz)
 
 ![](assets/screenshot.png)
 
@@ -41,9 +41,9 @@ npm install
  - Click `Show Client Secret` in the top Left
  ![](assets/secret.png)
 
- - Copy `Client ID` and `Client Secret` to `env.sample`
-
- - Rename `env.sample` to `.env`
+ - Copy `Client ID` and `Client Secret` to `template.env`
+ - Add a `redirect_uri` if running on a server
+ - Rename `template.env` to `.env`
 
 ### Step 3
 Run:
@@ -61,7 +61,7 @@ You will need to instlal pm2 to get this script to work. pm2 can be installed us
 sudo npm install pm2@latest -g
 ```
 
-Ensure your Redirect URIs are correct for your server's hostname in the [Spotify Dashboard](https://developer.spotify.com/dashboard/) and you update this block of code in `app.js`
+<!-- Ensure your Redirect URIs are correct for your server's hostname in the [Spotify Dashboard](https://developer.spotify.com/dashboard/) and you update this block of code in `app.js`
 
 ```js
 // change the if statement to your server's hostname and your redirect url you've set in spotify developer settings
@@ -70,7 +70,7 @@ if (os.hostname() == 'soneji.xyz'){
 } else {
   var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 }
-```
+``` -->
 
 Run
 ```sh
