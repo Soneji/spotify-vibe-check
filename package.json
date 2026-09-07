@@ -5,9 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "cookie-parser": "^1.4.7",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.22.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "nodemon": "^3.1.14",
     "request": "^2.88.2"
   },
