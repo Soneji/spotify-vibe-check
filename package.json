@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/overclockedllama/spotify-vibe-check/issues"
   },
-  "homepage": "https://github.com/overclockedllama/spotify-vibe-check#readme"
+  "homepage": "https://github.com/overclockedllama/spotify-vibe-check#readme",
+  "overrides": {
+    "form-data": "^2.5.4",
+    "qs": "^6.5.3"
+  }
 }
