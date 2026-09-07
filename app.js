@@ -130,6 +130,13 @@ app.get("/callback", function (req, res) {
           console.log(body);
         });
 
+        // bind the refresh token to this browser session so /refresh_token
+        // can verify the caller actually owns it
+        res.cookie("spotify_refresh_token", refresh_token, {
+          httpOnly: true,
+          sameSite: "lax",
+        });
+
         res.redirect(
           "/#" +
             querystring.stringify({
